@@ -1,5 +1,5 @@
 from typing import List
 from pathlib import Path
 
-def Parser:
+class Parser:
 	extensions: List[str] = []
