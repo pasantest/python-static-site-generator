@@ -13,3 +13,14 @@ class Content(Mapping):
 		_, fm, content = cls.__regex.split(string, 2)
 		metadata = load(fm, Loader=FullLoader)
 		return cls(metadata, content)
+
+	def __init__(self, metadata, content):
+		self.data = metadata
+		self.data["content"] = content
+
+		@property
+		def body(self):
+			return self.data["content"]
+		
+
+
